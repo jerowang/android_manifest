@@ -2,16 +2,19 @@
 <manifest>
 
   <remote  name="github"
-           fetch=".."
-           review="review.lineageos.org" />
+           fetch=".."/>
+           <!-- review="review.lineageos.org" -->
 
   <remote  name="private"
            fetch="ssh://git@github.com" />
 
+  <remote  name="jerowang"
+           fetch="ssh://git@github.com/jerowang" />
+
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
-           review="android-review.googlesource.com"
            revision="refs/tags/android-7.1.2_r29" />
+           <!-- review="android-review.googlesource.com"-->
 
   <default revision="refs/heads/cm-14.1"
            remote="github"
@@ -305,8 +308,8 @@
   <project path="external/zlib" name="LineageOS/android_external_zlib" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk" remote="aosp" />
-  <project path="/av" name="LineageOS/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="jero_frameworks_base" remote="jerowang" revision="cm-14.1" />
+  <project path="frameworks/av" name="LineageOS/android_frameworks_av" groups="pdk" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="jerowang" revision="cm-14.1" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/slang" name="platform/frameworks/compile/slang" groups="pdk" remote="aosp" />
